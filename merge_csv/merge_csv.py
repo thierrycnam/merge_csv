@@ -14,7 +14,7 @@ if __name__ == '__main__':
   frames = []
 
   for infile in infiles:
-    df = pd.read_csv(infile, sep=args.sep, engine='python')
+    df = pd.read_csv(infile, sep=args.sep, engine='python',index=False)
     frames.append(df)
   df_1 = pd.concat(frames)
   df_1.to_csv(args.outfile)
